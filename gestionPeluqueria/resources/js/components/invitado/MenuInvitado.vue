@@ -1,15 +1,16 @@
 <template>
     <div class="menu" :style="{ backgroundColor: color }">
         <router-link :to="{name: 'inicio'}"><img src="images/logo.png" v-on:click="cambiarFondoDivNada"></router-link>
-        <nav>
-            <ul>
-                <li v-on:click="cambiarFondoDivNada"><router-link :to="{name: 'inicio'}">Inicio</router-link></li>
-                <li v-on:click="cambiarFondoDiv"><router-link :to="{name: 'sobre-nosotros'}">Sobre Nosotros</router-link></li>
-                <li v-on:click="cambiarFondoDiv"><router-link :to="{name: 'servicios'}">Servicios</router-link></li>
-                <li v-on:click="cambiarFondoDiv"><router-link :to="{name: 'equipo'}">Equipo</router-link></li>
-                <li v-on:click="cambiarFondoDiv"><router-link :to="{name: 'login'}">Login</router-link></li>
+        <nav id="nav">
+            <ul id="menuUl">
+                <li id="menu_item" v-on:click="cambiarFondoDivNada"><router-link :to="{name: 'inicio'}">Inicio</router-link></li>
+                <li id="menu_item" v-on:click="cambiarFondoDiv"><router-link :to="{name: 'sobre-nosotros'}">Sobre Nosotros</router-link></li>
+                <li id="menu_item" v-on:click="cambiarFondoDiv"><router-link :to="{name: 'servicios'}">Servicios</router-link></li>
+                <li id="menu_item" v-on:click="cambiarFondoDiv"><router-link :to="{name: 'equipo'}">Equipo</router-link></li>
+                <li id="menu_item" v-on:click="cambiarFondoDiv"><router-link :to="{name: 'login'}">Login</router-link></li>
             </ul>
         </nav>
+        <span><img id="menuIcono" src="images/menuIcono.png" alt="menu"></span>
         
     </div>
 </template>
@@ -43,6 +44,28 @@ export default {
 </script>
 
 <style scoped>
+    #menuIcono{
+        /* background: #B59476; */
+        padding: 20px;
+        /* display: block; */
+        /* color: white; */
+        /* cursor: pointer;
+        font-size: 1.5rem;
+        width: 100%; */
+    }
+
+    @media (max-width: 840px) {
+        #menuIcono{
+            visibility: visible;
+        }   
+    }
+    
+
+    @media (max-width: 840px) {
+        #nav{
+            display: none;
+        }   
+    }
 
     .menu{
         width: 100%;

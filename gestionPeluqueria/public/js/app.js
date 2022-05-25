@@ -5494,6 +5494,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -10804,7 +10805,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.menu[data-v-c1a90bda]{\n    width: 100%;\n    margin: 0 auto;\n    clear: both;\n    display: table;\n    position: fixed;\n    height: 100px;\n}\nimg[data-v-c1a90bda]{\n    height: 100px;\n    width: 100px;\n    float: left;\n    padding: 8px;\n}\nnav[data-v-c1a90bda]{\n    float: right;\n}\nnav ul li[data-v-c1a90bda]{\n    list-style: none;\n    margin-left: 60px;\n    margin-right: 25px;\n    float: left;\n    padding: 30px 0;\n    position: relative;\n}\nh5[data-v-c1a90bda]{\n    color: rebeccapurple;\n}\nnav ul li a[data-v-c1a90bda]{\n    text-decoration: none;\n    color: rgb(157, 153, 153);\n    font-weight: bold;\n}\nnav ul li a[data-v-c1a90bda]::before{\n    display: block;\n    content: '';\n    width: 0%;\n    background: rgb(157, 153, 153);\n    height: 5px;\n    bottom: 20px;\n    position: absolute;\n}\nnav ul li a[data-v-c1a90bda]::before{\n    display: block;\n    content: '';\n    width: 0%;\n    background: #B59476;\n    height: 5px;\n    bottom: 20px;\n    position: absolute;\n}\nnav ul li a[data-v-c1a90bda]:hover::before{\n    width: 100%;\n}\nnav ul li a[data-v-c1a90bda]:hover{\n    color: white;\n}\n#menu[data-v-c1a90bda]{\n    background: black;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#menuIcono[data-v-c1a90bda]{\n    /* background: #B59476; */\n    padding: 20px;\n    /* display: block; */\n    /* color: white; */\n    /* cursor: pointer;\n    font-size: 1.5rem;\n    width: 100%; */\n}\n@media (max-width: 840px) {\n#menuIcono[data-v-c1a90bda]{\n        visibility: visible;\n}\n}\n@media (max-width: 840px) {\n#nav[data-v-c1a90bda]{\n        display: none;\n}\n}\n.menu[data-v-c1a90bda]{\n    width: 100%;\n    margin: 0 auto;\n    clear: both;\n    display: table;\n    position: fixed;\n    height: 100px;\n}\nimg[data-v-c1a90bda]{\n    height: 100px;\n    width: 100px;\n    float: left;\n    padding: 8px;\n}\nnav[data-v-c1a90bda]{\n    float: right;\n}\nnav ul li[data-v-c1a90bda]{\n    list-style: none;\n    margin-left: 60px;\n    margin-right: 25px;\n    float: left;\n    padding: 30px 0;\n    position: relative;\n}\nh5[data-v-c1a90bda]{\n    color: rebeccapurple;\n}\nnav ul li a[data-v-c1a90bda]{\n    text-decoration: none;\n    color: rgb(157, 153, 153);\n    font-weight: bold;\n}\nnav ul li a[data-v-c1a90bda]::before{\n    display: block;\n    content: '';\n    width: 0%;\n    background: rgb(157, 153, 153);\n    height: 5px;\n    bottom: 20px;\n    position: absolute;\n}\nnav ul li a[data-v-c1a90bda]::before{\n    display: block;\n    content: '';\n    width: 0%;\n    background: #B59476;\n    height: 5px;\n    bottom: 20px;\n    position: absolute;\n}\nnav ul li a[data-v-c1a90bda]:hover::before{\n    width: 100%;\n}\nnav ul li a[data-v-c1a90bda]:hover{\n    color: white;\n}\n#menu[data-v-c1a90bda]{\n    background: black;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29344,11 +29345,14 @@ var render = function () {
         }),
       ]),
       _vm._v(" "),
-      _c("nav", [
+      _c("nav", { attrs: { id: "nav" } }, [
         _c("ul", [
           _c(
             "li",
-            { on: { click: _vm.cambiarFondoDivNada } },
+            {
+              attrs: { id: "menu_item" },
+              on: { click: _vm.cambiarFondoDivNada },
+            },
             [
               _c("router-link", { attrs: { to: { name: "inicio" } } }, [
                 _vm._v("Inicio"),
@@ -29359,7 +29363,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "li",
-            { on: { click: _vm.cambiarFondoDiv } },
+            { attrs: { id: "menu_item" }, on: { click: _vm.cambiarFondoDiv } },
             [
               _c("router-link", { attrs: { to: { name: "sobre-nosotros" } } }, [
                 _vm._v("Sobre Nosotros"),
@@ -29370,7 +29374,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "li",
-            { on: { click: _vm.cambiarFondoDiv } },
+            { attrs: { id: "menu_item" }, on: { click: _vm.cambiarFondoDiv } },
             [
               _c("router-link", { attrs: { to: { name: "servicios" } } }, [
                 _vm._v("Servicios"),
@@ -29381,7 +29385,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "li",
-            { on: { click: _vm.cambiarFondoDiv } },
+            { attrs: { id: "menu_item" }, on: { click: _vm.cambiarFondoDiv } },
             [
               _c("router-link", { attrs: { to: { name: "equipo" } } }, [
                 _vm._v("Equipo"),
@@ -29392,7 +29396,7 @@ var render = function () {
           _vm._v(" "),
           _c(
             "li",
-            { on: { click: _vm.cambiarFondoDiv } },
+            { attrs: { id: "menu_item" }, on: { click: _vm.cambiarFondoDiv } },
             [
               _c("router-link", { attrs: { to: { name: "login" } } }, [
                 _vm._v("Login"),
@@ -29402,11 +29406,24 @@ var render = function () {
           ),
         ]),
       ]),
+      _vm._v(" "),
+      _vm._m(0),
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [
+      _c("img", {
+        attrs: { id: "menuIcono", src: "images/menuIcono.png", alt: "menu" },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
