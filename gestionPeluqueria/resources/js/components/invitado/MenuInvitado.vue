@@ -1,6 +1,9 @@
 <template>
     <div class="menu" :style="{ backgroundColor: color }">
-        <router-link :to="{name: 'inicio'}"><img src="images/logo.png" v-on:click="cambiarFondoDivNada"></router-link>
+        <div>
+            <router-link :to="{name: 'inicio'}"><img src="images/logo.png" v-on:click="cambiarFondoDivNada"></router-link>
+            <span><img id="menuIcono" src="images/menuIcono.png" alt="menu"></span>
+        </div>
         <nav id="nav">
             <ul id="menuUl">
                 <li id="menu_item" v-on:click="cambiarFondoDivNada"><router-link :to="{name: 'inicio'}">Inicio</router-link></li>
@@ -10,7 +13,7 @@
                 <li id="menu_item" v-on:click="cambiarFondoDiv"><router-link :to="{name: 'login'}">Login</router-link></li>
             </ul>
         </nav>
-        <span><img id="menuIcono" src="images/menuIcono.png" alt="menu"></span>
+        
         
     </div>
 </template>
@@ -52,11 +55,15 @@ export default {
         /* cursor: pointer;
         font-size: 1.5rem;
         width: 100%; */
+        float: right;
+        visibility: hidden;
+        display: none;
     }
 
     @media (max-width: 840px) {
         #menuIcono{
             visibility: visible;
+            display: inherit;
         }   
     }
     
